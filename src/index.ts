@@ -31,6 +31,9 @@ interface GetFileDataArgs {
   nodeTypes?: string[];
   cursor?: string;
   depth?: number;
+  maxResponseSize?: number;
+  excludeProps?: string[];
+  summarizeNodes?: boolean;
 }
 
 class FigmaMCPServer {
@@ -119,6 +122,23 @@ class FigmaMCPServer {
                 type: 'number',
                 description: 'Maximum depth to traverse in the node tree',
                 minimum: 1
+              },
+              maxResponseSize: {
+                type: 'number',
+                description: 'Maximum response size in MB (defaults to 50)',
+                minimum: 1,
+                maximum: 100
+              },
+              excludeProps: {
+                type: 'array',
+                items: {
+                  type: 'string'
+                },
+                description: 'Properties to exclude from node data'
+              },
+              summarizeNodes: {
+                type: 'boolean',
+                description: 'Return only essential node properties to reduce response size'
               }
             },
             required: ['file_key']
@@ -240,12 +260,23 @@ class FigmaMCPServer {
               pageSize: args.pageSize,
               maxMemoryMB: args.maxMemoryMB,
               nodeTypes: args.nodeTypes,
+              maxResponseSize: args.maxResponseSize,
+              excludeProps: args.excludeProps,
+              summarizeNodes: args.summarizeNodes
             });
 
             const result = await this.figmaClient.getFileInfoChunked(
               args.file_key,
               args.cursor,
-              args.depth
+              args.depth,
+              {
+                pageSize: args.pageSize,
+                maxMemoryMB: args.maxMemoryMB,
+                nodeTypes: args.nodeTypes,
+                maxResponseSize: args.maxResponseSize,
+                excludeProps: args.excludeProps,
+                summarizeNodes: args.summarizeNodes
+              }
             );
 
             return {

@@ -357,7 +357,8 @@ export type SceneNode =
   | LineNode
   | TextNode
   | ComponentNode
-  | InstanceNode;
+  | InstanceNode
+  | CanvasNode;
 
 /**
  * Represents a Figma file metadata.
