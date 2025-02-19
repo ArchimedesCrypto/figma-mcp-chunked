@@ -1,4 +1,5 @@
 # Figma MCP Server with Chunking
+[![smithery badge](https://smithery.ai/badge/@ArchimedesCrypto/figma-mcp-chunked)](https://smithery.ai/server/@ArchimedesCrypto/figma-mcp-chunked)
 
 A Model Context Protocol (MCP) server for interacting with the Figma API, featuring memory-efficient chunking and pagination capabilities for handling large Figma files.
 
@@ -20,6 +21,15 @@ This MCP server provides a robust interface to the Figma API with built-in memor
 
 ## Installation
 
+### Installing via Smithery
+
+To install Figma MCP Server with Chunking for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@ArchimedesCrypto/figma-mcp-chunked):
+
+```bash
+npx -y @smithery/cli install @ArchimedesCrypto/figma-mcp-chunked --client claude
+```
+
+### Manual Installation
 ```bash
 # Clone the repository
 git clone [repository-url]
