@@ -3,6 +3,10 @@
 
 A Model Context Protocol (MCP) server for interacting with the Figma API, featuring memory-efficient chunking and pagination capabilities for handling large Figma files.
 
+<a href="https://glama.ai/mcp/servers/@ArchimedesCrypto/figma-mcp-chunked">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@ArchimedesCrypto/figma-mcp-chunked/badge" alt="Figma Server with Chunking MCP server" />
+</a>
+
 ## Overview
 
 This MCP server provides a robust interface to the Figma API with built-in memory management features. It's designed to handle large Figma files efficiently by breaking down operations into manageable chunks and implementing pagination where necessary.
@@ -240,7 +244,7 @@ The server provides detailed error messages and suggestions:
 
 ```typescript
 // Memory limit error
-"Response size too large. Try using a smaller depth value or specifying a node_id."
+"Response size too large. Try using a smaller depth value or specifying a node_id.""
 
 // Invalid parameters
 "Missing required parameters: fileKey and accessToken"
