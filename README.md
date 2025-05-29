@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/archimedescrypto-figma-mcp-chunked-badge.png)](https://mseep.ai/app/archimedescrypto-figma-mcp-chunked)
+
 # Figma MCP Server with Chunking
 [![smithery badge](https://smithery.ai/badge/@ArchimedesCrypto/figma-mcp-chunked)](https://smithery.ai/server/@ArchimedesCrypto/figma-mcp-chunked)
 
